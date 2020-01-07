@@ -25,3 +25,7 @@ function changePlayer(n){
     }
     
 }
+
+function hoverEffect(){
+    
+}
