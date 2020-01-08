@@ -303,14 +303,33 @@ svg {
 
 .layout-icon img{
     width:36px;
-    height:36px;
+    height:100%;
     padding-right: 6px;
-    transform:translateY(-3px);
+}
+
+.layout-icon a{
+    display:block;
+}
+
+.layout-icon{
+    height:100%;
+}
+
+.layout-head{
+    height:100%;
 }
 
 .layout-head h2 a{
     font-size:20px;
     color:#222;
+    height:100%;
+}
+
+.layout-head h2{
+    font-size:20px;
+    color:#222;
+    margin:0;
+    height:100%;
 }
 
 #tjhd h2{
@@ -324,13 +343,16 @@ svg {
 
 .layout-head{
     margin-right:16px;
-    vertical-align:bottom;
+    vertical-align:middle;
+    height:100%;
+    padding-bottom: 12px;
+    
 }
 
 .layout-info{
     color:#999;
-    vertical-align: baseline;
-    transform:translateY(-10px);
+    vertical-align: -webkit-baseline-middle;
+    height:100%;
 }
 
 .layout1-content{
@@ -396,10 +418,6 @@ svg {
     height:340px;
 }
 
-.layout1-part.sub1 .layout1-header .layout-icon img{
-    transform:translateY(0px);
-}
-
 
 .layout1-part.sub1 .layout1-content{
     border-radius:6px;
@@ -422,20 +440,13 @@ svg {
 
 #tjhd{
     width:336px;
-    transform: translateY(-9px);
 }
 
-#tjhd .layout-icon{
-    transform:translateY(-7px);
-}
-
-#tjhd .layout1-header{
-    transform:translateY(-7px);
-}
 
 #tjhd .layout1-content{
     width:336px;
     height:280px;
+    margin-top:-9px;
 }
 
 #tjhd .layout1-content img{
@@ -693,6 +704,11 @@ svg {
 }
 */
 
+.layout-container{
+    height:inherit;
+    width:960px;
+}
+
 .fullBack{
     width:100%;
     min-height:324px;
@@ -701,15 +717,14 @@ svg {
 }
 
 .layout2{
-    margin-top:4px;
     width:960px;
-    height:488px;
+    height:463.88px;
     margin:auto;
+    text-align: left;
 }
 
 .layout2-part{
     float:left;
-    text-align: left;
     width:100%;
 }
 
@@ -726,7 +741,6 @@ svg {
 }
 
 .layout2-content{
-    height:inherit;
     width:100%;
 }
 
@@ -753,7 +767,7 @@ svg {
 }
 
 .layout-live{
-    transform:translateY(16px);
+    padding-top:16px;
 }
 
 .layout-list{
@@ -764,7 +778,7 @@ svg {
     height:403.875px;
     width:100%;
     padding:0;
-    transform:translateY(-10px);
+    margin-top:0;
 }
 
 .layout-list-item{
@@ -868,7 +882,7 @@ svg {
 
 
 .fullBack#rmfl{
-    margin-top:6px;
+    margin-top:26px;
     height:418px;
     background-image: url(images/fix_background.webp);
     background-attachment: fixed;
@@ -884,7 +898,6 @@ svg {
 #rmfl .layout-extra{
     float:none;
     vertical-align: top;
-    transform: translateY(-2px);
 }
 
 #rmfl .liveLabel,#rmfl .a-more,#rmfl .layout-head>h2>a{
@@ -895,9 +908,6 @@ svg {
     color: #ff5d23;
 }
 
-#rmfl .layout-head{
-    transform: translateY(-3px);
-}
 
 .layout-categories{
     margin-top:8px;
@@ -958,14 +968,261 @@ svg {
     letter-spacing: 0;
 }
 
+#jchd{
+    margin:26px 0 4px;
+    background-color: #ecf1f8;
+    height:269px;
+}
+
+#jchd .layout2{
+    height:inherit;
+    background: url(images/jchd_background.webp) no-repeat;
+    background-position-x: 700px;
+}
+
+#jchd .layout-list-item{
+    margin-bottom: 12px;
+    width: 182.4px;
+    height: 177.296px;
+}
+
+.layout2-ad{
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    top: 6px;
+    left: 6px;
+    background: url(images/ad_icon.png) no-repeat;
+}
+
+#jchd .layout2-pic .layout2-img{
+    height: 122px;
+    width: 100%;
+    overflow:hidden;
+}
+
+.txt-ellipsis{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#jchd h3, #jchd p{
+    line-height: 18px;
+    max-width: 90%;
+    text-align: left;
+}
+
+#jchd h3{
+    color:#333;
+    font-size:14px;
+    margin:0;
+}
+
+#jchd p{
+    color:#888;
+    font-size:12px;
+    margin:0;
+}
+
+#jchd a:hover h3{
+    color:#ff5d23;
+}
+
+.layout2:not(:first-child){
+    margin-top:4px;
+}
+
+#part_jdqs{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
 
 
+.layout2-container.layout2-withRank{
+    height:100%;
+    width: 717px;
+}
+
+.layout2-rank{
+    width:231px;
+    height:inherit;
+}
+
+.layout-more>.a-more.active{
+    color:#ff5d23;
+}
+
+#weekRank{
+    margin:0;
+}
+
+#splitRank{
+    margin:0 5px;
+}
+
+.layout2-rank .layout2-content{
+    background-color: #fff;
+    border-radius:6px;
+    position:static;
+    top:60px;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+.layout-rank-list{
+    margin:15px 0;
+    height: 330px;
+}
+
+.layout-rank-more{
+    height: 44px;
+    line-height: 44px;
+    display:block;
+    background-color: #eceff3;
+    text-align: center;
+    color: #67686a;
+}
+
+.layout-rank-item{
+    height: 66px;
+    overflow: hidden;
+}
+
+.rankNum{
+    height: 66px;
+    line-height: 66px;
+    float:left;
+    width: 40px;
+    text-align: center;
+}
+
+.rankOne,.rankTwo,.rankThree,.rankIsUp,.rankIsDown,.rankUnChange{
+    background-image: url(images/rank_icon_list.webp);
+    background-repeat: no-repeat;
+}
+
+.rankOne,.rankTwo,.rankThree{
+    position:relative;
+    top:5px;
+    width: 22px;
+    height: 22px;
+}
+
+.rankOne{
+    background-size: 285.71% 247.62%;
+    background-position: 0 0;
+}
+
+.rankTwo{
+    background-size: 285.71% 247.62%;
+    background-position: -21px 0;
+}
+
+.rankThree{
+    background-size: 285.71% 247.62%;
+    background-position: 0 -21px;
+}
+
+.rankNum>span{
+    display: inline-block;
+}
+
+.normalRank{
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: #b9b9b9;
+    color: #fff;
+    text-align: center;
+}
+
+.layout2-rank a{
+    color:#333;
+    height:100%;
+}
+
+.layout-rank-item>a:hover>.rankName{
+    color:#ff5d23
+}
+
+.rankIcon{
+    width: 44px;
+    height: 44px;
+    float:left;
+    position:relative;
+    top:10px;
+}
+
+.rankIcon img{
+    position:relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:50%;
+}
+
+.live-icon{
+    background-image: url(images/live_icon.gif);
+    position:absolute;
+    width: 20px;
+    height: 19px;
+    right: -4px;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    background-size: cover;
+    border-radius:50%;
+}
 
 
+.rankName{
+    line-height: 66px;
+    height: 66px;
+    max-width: 94px;
+    margin-left: 8px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size:14px;
+}
 
+.rankChange{
+    height: 66px;
+    float: right;
+    padding-right: 12px;
+    width: 18px;
+    display: inline-block;
+    line-height: 66px;
+}
 
+.rankIsUp, .rankIsDown, .rankUnChange{
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+}
 
+.rankUnChange{
+    background-size: 333.33% 288.89%;
+    background-position: -42px -18px;
+}
 
+.rankIsUp{
+    background-size: 333.33% 288.89%;
+    background-position: -42px 0;
+}
 
+.rankIsDown{
+    background-size: 333.33% 288.89%;
+    background-position: -21px -21px;
+}
 
 
