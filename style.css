@@ -264,6 +264,11 @@ svg {
 
 
 /*main content css*/
+.mainContent div{
+    display:block;
+}
+
+
 .layout1{
     width:960px;
     height:311px;
@@ -345,7 +350,7 @@ svg {
 }
 
 .layout-a{
-    color:black;
+    color:#333;
 }
 
 .layout-a:hover .layout-title h3{
@@ -698,7 +703,7 @@ svg {
 .layout2{
     margin-top:4px;
     width:960px;
-    height:inherit;
+    height:488px;
     margin:auto;
 }
 
@@ -713,6 +718,7 @@ svg {
     height:36px;
     width:100%;
     line-height:1;
+    text-align: left;
 }
 
 .layout2-header div{
@@ -859,4 +865,107 @@ svg {
 .layout-a:hover .layout2-type{
     display:none;
 }
+
+
+.fullBack#rmfl{
+    margin-top:6px;
+    height:418px;
+    background-image: url(images/fix_background.webp);
+    background-attachment: fixed;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#rmfl .layout2{
+    height: 418px;
+}
+
+#rmfl .layout-extra{
+    float:none;
+    vertical-align: top;
+    transform: translateY(-2px);
+}
+
+#rmfl .liveLabel,#rmfl .a-more,#rmfl .layout-head>h2>a{
+    color: hsla(0,0%,100%,.9);
+}
+
+#rmfl .a-more:hover,#rmfl .layout-head>h2>a:hover{
+    color: #ff5d23;
+}
+
+#rmfl .layout-head{
+    transform: translateY(-3px);
+}
+
+.layout-categories{
+    margin-top:8px;
+    margin-bottom:18px;
+    height:332px;
+    overflow:hidden;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    font-size: 0;
+    padding:0;
+}
+
+.layout-categories-item{
+    margin-bottom: 12px;
+    width: 126px;
+    height: 160px;
+    border-radius:14px;
+}
+
+.layout-categories-item>a{
+    background: url(images/categories_item_background.webp) 50%/cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.layout-categories-item>a:hover {
+    background: url(images/categories_item__hover_background.webp) 50%/cover;
+}
+
+.categories-icon{
+    position: relative;
+    overflow: hidden;
+    width: 82px;
+    height: 82px;
+    margin:10px auto 0;
+}
+
+.categories-icon img{
+    width:100%;
+    height: 100%;
+}
+
+.categories-title{
+    font-size:16px;
+    line-height: 24px;
+    margin-top: -4px;
+}
+
+.categories-info{
+    margin-top: -2px;
+    color:#909090;
+    font-size: 12px;
+    letter-spacing: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
