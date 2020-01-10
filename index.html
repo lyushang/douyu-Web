@@ -92,40 +92,46 @@
                 
                 <div id="slider">
                     <ul>
-                        <li>
-                            <div class="slider-item" onclick="changePlayer(1)">
-                                <img src="images/player1.jpg" id="player1">
+                        <li class="slider-item">
+                            <div class="slider-img" id="player1" onclick="changePlayer(1)">
+                                <img src="images/player1.jpg">
+                                <div class="slider-border"></div>
                             </div>
                             <div class="arrow" id="a1"></div>
                         </li>
-                        <li>
-                            <a href="javascript:changePlayer(2)">
-                                <img src="images/player2.jpg" id="player2">
-                            </a>
+                        <li class="slider-item">
+                            <div class="slider-img" id="player2" onclick="changePlayer(2)">
+                                <img src="images/player2.jpg">
+                                <div class="slider-border"></div>
+                            </div>
                             <div class="arrow" id="a2"></div>
                         </li>
-                        <li>
-                            <a href="javascript:changePlayer(3)">
-                                <img src="images/player3.jpg" id="player3">
-                            </a>
+                        <li class="slider-item">
+                            <div class="slider-img" id="player3" onclick="changePlayer(3)">
+                                <img src="images/player3.jpg">
+                                <div class="slider-border"></div>
+                            </div>
                             <div class="arrow" id="a3"></div>
                         </li>
-                        <li>
-                            <a href="javascript:changePlayer(4)">
-                                <img src="images/player4.jpg" id="player4">
-                            </a>
+                        <li class="slider-item">
+                            <div class="slider-img" id="player4" onclick="changePlayer(4)">
+                                <img src="images/player4.jpg">
+                                <div class="slider-border"></div>
+                            </div>
                             <div class="arrow" id="a4"></div>
                         </li>
-                        <li>
-                            <a href="javascript:changePlayer(5)">
-                                <img src="images/player5.jpg" id="player5">
-                            </a>
+                        <li class="slider-item">
+                            <div class="slider-img" id="player5" onclick="changePlayer(5)">
+                                <img src="images/player5.jpg">
+                                <div class="slider-border"></div>
+                            </div>
                             <div class="arrow" id="a5"></div>
                         </li>
-                        <li>
-                            <a href="javascript:changePlayer(6)">
-                                <img src="images/player6.jpg" id="player6">
-                            </a>
+                        <li class="slider-item">
+                            <div class="slider-img" id="player6" onclick="changePlayer(6)">
+                                <img src="images/player6.jpg">
+                                <div class="slider-border"></div>
+                            </div>
                             <div class="arrow" id="a6"></div>
                         </li>
                     </ul>
@@ -134,11 +140,11 @@
         </div>
         
         <div id="mainContent">
-            <div class="layout1">
+            <div class="layout1" id="first_part">
                 <div class="layout1-part" id="cyhx">
                     <div class="layout1-header">
                         <div class="layout-icon">
-                            <a href="https://www.douyu.com/g_CF"><img src="images/cf_icon.webp"></a>
+                            <a href="https://www.douyu.com/g_CF"><img src="images/cyhx_icon.webp"></a>
                         </div>
                         <div class="layout-head">
                             <h2><a href="https://www.douyu.com/g_CF">穿越火线</a></h2>
@@ -331,7 +337,7 @@
                     </div>
                 </div>
             </div>
-            <div class="layout1">
+            <div class="layout1" id="second_part">
                 <div class="layout1-part sub1" id="tjhd">
                     <div class="layout1-header">
                         <div class="layout-icon">
@@ -712,9 +718,157 @@
                 </div>
             </div> 
             <div class="fullBack" id="yzns">
-                
+                <div class="pic-container">
+                    <div class="square">
+                        <a class="layout-a" href="https://www.douyu.com/1853869" target="_blank">
+                            <div class="square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_1.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="顾北宁">顾北宁</span>
+                                    <span class="face-hot" title="53.7万">
+                                        <span class="face-icon"></span>
+                                        53.7万</span>
+                                </div>
+                                <div class="face-second" title="250是我爱你">250是我爱你</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="square">
+                        <a class="layout-a" href="https://www.douyu.com/56789" target="_blank">
+                            <div class="square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_2.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="白菜mm丶">白菜mm丶</span>
+                                    <span class="face-hot" title="144.1万">
+                                        <span class="face-icon"></span>
+                                        144.1万</span>
+                                </div>
+                                <div class="face-second" title="总有些惊喜的际遇 5324159">总有些惊喜的际遇 5324159</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="square">
+                        <a class="layout-a" href="https://www.douyu.com/6531353" target="_blank">
+                            <div class="square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_3.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="新来的杨暖暖n">新来的杨暖暖n</span>
+                                    <span class="face-hot" title="26.3万">
+                                        <span class="face-icon"></span>
+                                        26.3万</span>
+                                </div>
+                                <div class="face-second" title="2020想遇见你">2020想遇见你</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="square">
+                        <a class="layout-a" href="https://www.douyu.com/541829" target="_blank">
+                            <div class="square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_4.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="小布丁3">小布丁3</span>
+                                    <span class="face-hot" title="33.9万">
+                                        <span class="face-icon"></span>
+                                        33.9万</span>
+                                </div>
+                                <div class="face-second" title="你开心就是我开心">你开心就是我开心</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="double-square">
+                        <a class="layout-a" href="https://www.douyu.com/7651487" target="_blank">
+                            <div class="double-square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_5.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="莉芝不是荔枝">莉芝不是荔枝</span>
+                                    <span class="face-hot" title="42.9万">
+                                        <span class="face-icon"></span>
+                                        42.9万</span>
+                                </div>
+                                <div class="face-second" title="我也想要老公粉…！">我也想要老公粉…！</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="double-square" id="yzns-title">
+                        <a href="https://www.douyu.com/g_yz">
+                            <div class="yzns-icon"></div>
+                            <div class="yzns-content">
+                                <h2>颜值女神</h2>
+                                <h3>STARSHOW</h3>
+                                <h4>靓歌热舞卖萌无所不能</h4>
+                            </div>
+                            <div class="yzns-more">查看更多</div>
+                        </a>
+                    </div>
+                    <div class="square">
+                        <a class="layout-a" href="https://www.douyu.com/974894" target="_blank">
+                            <div class="square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_6.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="林小鸟a">林小鸟a</span>
+                                    <span class="face-hot" title="29.8万">
+                                        <span class="face-icon"></span>
+                                        29.8万</span>
+                                </div>
+                                <div class="face-second" title="2020爱你爱你 974894">2020爱你爱你 974894</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="square">
+                        <a class="layout-a" href="https://www.douyu.com/5515841" target="_blank">
+                            <div class="square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_7.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="喵小莎">喵小莎</span>
+                                    <span class="face-hot" title="56.7万">
+                                        <span class="face-icon"></span>
+                                        56.7万</span>
+                                </div>
+                                <div class="face-second" title="感谢所有相遇">感谢所有相遇</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="double-square">
+                        <a class="layout-a" href="https://www.douyu.com/896127" target="_blank">
+                            <div class="double-square-cover"></div>
+                            <div class="layout2-img">
+                                <img src="images/yzns_8.webp">
+                            </div>
+                            <div class="face-info">
+                                <div class="face-first">
+                                    <span class="face-name" title="满满err">满满err</span>
+                                    <span class="face-hot" title="52.7万">
+                                        <span class="face-icon"></span>
+                                        52.7万</span>
+                                </div>
+                                <div class="face-second" title="2020❤️">2020❤️</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="layout2">
+            <div class="layout2" id="part_jctj">
                 <div class="layout2-part"  id="jctj">
                     <div class="layout2-header">
                         <div class="layout-icon">
@@ -723,7 +877,7 @@
                             </a>
                         </div>
                         <div class="layout-head">
-                            <h2><a href="https://www.douyu.com/directory/all">精彩推荐</a></h2>
+                            <h2><a href="https://www.douyu.com/directory/all" target="_blank">精彩推荐</a></h2>
                         </div>
                         <div class="layout-extra">
                             <div class="layout-live">
@@ -1595,6 +1749,40 @@
                         </div>
                         <a class="layout-rank-more" href="https://www.douyu.com/t/pubgstar" target="_blank">更多主播 ></a>
                     </div>
+                </div>
+            </div>
+            <div class="layout2" id="part_gfhd">
+                <div class="layout2-header">
+                    <div class="layout-icon">
+                        <img src="images/gfhd_icon.webp">
+                    </div>
+                    <div class="layout-head">
+                        <h2>官方活动</h2>
+                    </div>
+                </div>
+                <div class="layout2-content">
+                    <ul class="layout-list">
+                        <li class="layout-list-item">
+                                <a href="https://www.douyu.com/605964" target="_blank">
+                                    <img src="images/gfhd_1.webp">
+                                </a>
+                        </li>
+                        <li class="layout-list-item">
+                            <a href="https://www.douyu.com/topic/CFplan#root" target="_blank">
+                                <img src="images/gfhd_2.webp">
+                            </a>
+                        </li>
+                        <li class="layout-list-item">
+                            <a href="https://www.douyu.com/cms/new_list/201912/03/11848.shtml" target="_blank">
+                                <img src="images/gfhd_3.webp">
+                            </a>
+                        </li>
+                        <li class="layout-list-item">
+                            <a href="https://www.douyu.com/cms/new_list/201912/21/11969.shtml" target="_blank">
+                                <img src="images/gfhd_4.webp">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

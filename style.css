@@ -33,6 +33,10 @@ li{
     list-style:none;
 }
 
+h1, h2, h3, h4, h5, h6, p, pre{
+    margin:0;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-size:12px;
     font-weight:400;
@@ -222,28 +226,57 @@ svg {
     bottom:0;
     width:176px;
     height: 100%;
-    padding: 6px 20px 6px 0;
 }
 
-#slider #player1{
+#slider ul{
+    height:100%;
+    width: 176px;;
+    padding: 10px 0;
+    box-sizing: border-box;
+    margin:0;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.slider-item{
+    width:100%;
+    height:16.6%;
+    padding-top:3.2%;
+    box-sizing:border-box;
+}
+
+/* #slider #player1{
     box-sizing: border-box;
     border:3px solid #ff5d23;
-}
+} */
 
 #a1{
     border-right: 8px solid #ff5d23;
 }
 
-#slider img{
+.slider-img{
     width:146px;
     height:65px;
     border:none;
     border-radius: 4px;
+    overflow:hidden;
+    margin:0 auto;
+    position:absolute;
+    left:17px;
+    cursor: pointer;
 }
 
-#slider img:hover{
-    box-sizing: border-box;
-    border:3px solid #ff5d23;
+.slider-img img{
+    width:100%;
+    height:100%;
+}
+
+.slider-img:hover .slider-border{
+    display:block;
 }
 
 .arrow{
@@ -252,10 +285,25 @@ svg {
     border-top: 7px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 7px solid transparent;
-    left: -8px;
-    margin-top: -5px;
+    left: 9px;
     position:relative;
-    top:-37px;
+    top:25px;;
+}
+
+#player1 .slider-border{
+    display:block;
+}
+
+.slider-border{
+    display:none;
+    width: 146px;
+    height: 65px;
+    border: 3px solid #ff5d23;
+    border-radius:4px;
+    box-sizing: border-box;
+    position:absolute;
+    left:0;
+    top:0;
 }
 
 #slider li{
@@ -345,7 +393,7 @@ svg {
     margin-right:16px;
     vertical-align:middle;
     height:100%;
-    padding-bottom: 12px;
+    padding-bottom: 13px;
     
 }
 
@@ -391,7 +439,7 @@ svg {
 
 .layout-img{
     width:100%;
-    height:86px;
+    height:100%;
     transition: 0.1s transform;
     overflow:hidden;
 }
@@ -428,10 +476,6 @@ svg {
 
 #xw .layout1-content{
     margin-right:10px;
-}
-
-#sptj .layout1-content{
-    padding: 0 2px 0 10px;
 }
 
 #sptj{
@@ -713,7 +757,6 @@ svg {
     width:100%;
     min-height:324px;
     margin: 36px 0 4px;
-    background-color:pink;
 }
 
 .layout2{
@@ -794,12 +837,13 @@ svg {
     display:block;
     position:relative;
     width:100%;
+    height: 129.94px;
     overflow:hidden;
 }
 
 .layout2-img{
     width:100%;
-    height:130px;
+    height:100%;
     transition: 0.1s transform;
 }
 
@@ -880,6 +924,178 @@ svg {
     display:none;
 }
 
+
+#yzns{
+    background-image: url(images/yzns_background.webp);
+    min-height: 324px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.pic-container{
+    height:324px;
+    width: 960px;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.square{
+    width: 160px;
+    height: 162px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.square>.layout-a:hover>.layout2-img, .double-square>.layout-a:hover>.layout2-img{
+    transition: 0.4s transform;
+}
+
+#yzns .layout-a:hover .face-info{
+    transform: translateY(-35px);
+}
+
+#yzns-title:hover{
+    background-color: #fab614;
+}
+
+.square-cover{
+    background:url(images/square_cover.webp) no-repeat 0;
+    background-size: 101% 101%;
+    position: absolute;;
+    width: 160px;
+    height: 162px;
+    z-index:1;
+}
+
+.double-square-cover{
+    background:url(images/double_square_cover.webp) no-repeat 0;
+    background-size: 101% 101%;
+    position: absolute;;
+    width: 320px;
+    height: 162px;
+    z-index:1;
+}
+
+.face-info{
+    position:relative;
+    bottom: 27px;
+    text-align: left;
+    z-index:2;
+    box-sizing: border-box;
+    width: 100%;
+    padding:0 12px;
+    transition: 0.3s transform;
+}
+
+
+.face-name, .face-hot{
+    display: inline-block;
+    max-width:50%;
+}
+
+.face-name{
+    font-size:14px;
+    color:white;
+    float:left;
+}
+
+.face-hot{
+    float:right;
+    font-size: 12px;
+}
+
+.face-hot, .face-second{
+    color:hsla(0,0%,100%,.6);
+}
+
+.face-icon, .yzns-icon{
+    background-image: url(images/yzns_icon.webp);
+}
+
+.face-icon{
+    background-size: 1333.33% 1166.67%;
+    background-position: 0 -128px;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    line-height: 18px;
+    margin-right: 4px;
+    transform: translateY(1px);
+}
+
+.face-first{
+    height:20px;
+}
+
+.face-name, .face-second{
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.face-second{
+    display:block;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.double-square{
+    position: relative;;
+    width: 320px;
+    height: 162px;
+    overflow: hidden;
+    margin: 0;
+}
+
+#yzns-title{
+    background-color: #f1bc44;
+}
+
+.yzns-icon{
+    width: 135px;
+    height: 108px;
+    position: absolute;
+    right: -25px;
+    bottom: 3px;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+.yzns-content{
+    padding-left: 25px;
+    padding-top: 22px;
+    text-align: left;
+    color:white;
+}
+
+.yzns-content h2{
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.yzns-content h3{
+    font-size:24px ;
+    margin-top: 20px;
+    line-height: 36px;
+}
+
+.yzns-content h4{
+    font-size: 14px;
+}
+
+.yzns-more{
+    position: absolute;
+    right: 16px;
+    bottom: 7px;
+    color:#7e5801;
+    font-size: 14px;
+}
 
 .fullBack#rmfl{
     margin-top:26px;
@@ -984,6 +1200,10 @@ svg {
     margin-bottom: 12px;
     width: 182.4px;
     height: 177.296px;
+}
+
+#jchd .layout2-description{
+    padding: 2px 10px;
 }
 
 .layout2-ad{
@@ -1225,4 +1445,28 @@ svg {
     background-position: -21px -21px;
 }
 
+#part_gfhd{
+    height: inherit;
+}
 
+#part_gfhd .layout2-header{
+    padding-top:20px;
+}
+#part_gfhd .layout-list{
+    height:97.02px;
+}
+
+#part_gfhd .layout-list-item{
+    height: 100%;
+}
+
+#part_gfhd .layout-list-item img{
+    height: 100%;
+    width: 100%;
+    transition: 0.4s filter;
+}
+
+
+#part_gfhd .layout-list-item a:hover img{
+    filter:brightness(75%);
+}
