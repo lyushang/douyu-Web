@@ -348,7 +348,33 @@
                         </div>
                     </div>
                     <div class="layout1-content">
-                        <a href="#"><img src="images/tjhd_1.webp"></a>
+                        <div class="main-player">
+                            <div id="full-items">
+                                <div class="tjhd-player is-show">
+                                    <a href="https://www.douyu.com/topic/DreamS3?rid=7085831" target="_blank">
+                                        <img src="images/tjhd_1.webp">
+                                    </a>
+                                    <span class="tjhd-img-title" title="梦幻模拟战S3巅峰赛开幕！">梦幻模拟战S3巅峰赛开幕！</span>
+                                </div>
+                                <div class="tjhd-player">
+                                    <a href="https://www.douyu.com/cms/new_list/201912/21/11969.shtml" target="_blank">
+                                        <img src="images/tjhd_2.webp">
+                                    </a>
+                                    <span class="tjhd-img-title" title="斗鱼巅峰赛全面开赛">斗鱼巅峰赛全面开赛</span>
+                                </div>
+                                <div class="tjhd-player">
+                                    <a href="https://www.douyu.com/member/anchor/recruit_detail?id=1519" target="_blank">
+                                        <img src="images/tjhd_3.webp">
+                                    </a>
+                                    <span class="tjhd-img-title" title="热门网游新年主播召集令">热门网游新年主播召集令</span>
+                                </div>
+                            </div>
+                            <ul class="player-dot">
+                                <li class="dots is-selected" id="dot1" onclick="chooseDot()"></li>
+                                <li class="dots" id="dot2" onclick="chooseDot()"></li>
+                                <li class="dots" id="dot3" onclick="chooseDot()"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="layout1-part sub1" id="xw">
@@ -1785,6 +1811,81 @@
                     </ul>
                 </div>
             </div>
+        </div>
+
+        <div id="left-sideBar">
+            <ul class="left-sideBar-container">
+                <a href="#yzns" onclick="changeActive(1)">
+                    <li class="left-sideBar-item is-active grey"  id="s1">
+                        <span class="seperator"></span>
+                        <i>颜值</i>
+                    </li>
+                </a>
+                <a href="#part_lol" onclick="changeActive(2)">
+                    <li class="left-sideBar-item" id="s2">
+                        <span class="seperator"></span>
+                        <i>英雄联盟</i>
+                    </li>
+                </a>
+                <a href="#part_jdqs" onclick="changeActive(3)">
+                    <li class="left-sideBar-item grey" id="s3">
+                        <span class="seperator"></span>
+                        <i>绝地求生</i>
+                    </li>
+                </a>
+                <a href="#part_cf" onclick="changeActive(4)">
+                    <li class="left-sideBar-item" id="s4">
+                        <span class="seperator"></span>
+                        <i>穿越火线</i>
+                    </li>
+                </a>
+                <a href="#part_wzry" onclick="changeActive(5)">
+                    <li class="left-sideBar-item grey" id="s5">
+                        <span class="seperator"></span>
+                        <i>王者荣耀</i>
+                    </li>
+                </a>
+            </ul>
+        </div>
+
+        <div id="right-sideBar">
+            <ul class="right-sideBar-list">
+                <li class="right-sideBar-item" id="r1">
+                    <a href="https://www.douyu.com/client?tab=client#pc" target="_blank">
+                        <span class="right-sideBar-icon"></span>
+                        <span class="right-sideBar-text">客户端打开</span>
+                    </a>
+                </li>
+                <li class="right-sideBar-item" id="r2">
+                    <a href="https://www.douyu.com/client?tab=client#mobile" target="_blank">
+                        <span class="right-sideBar-icon"></span>
+                        <span class="right-sideBar-text">APP下载</span>
+                    </a>
+                </li>
+                <li class="right-sideBar-item" id="r3">
+                    <a href="https://www.douyu.com/special/guide/anchor" target="_blank">
+                        <span class="right-sideBar-icon"></span>
+                        <span class="right-sideBar-text">我要开播</span>
+                    </a>
+                </li>
+                <li class="right-sideBar-item" id="r4">
+                    <a href="https://wan.douyu.com/" target="_blank">
+                        <span class="right-sideBar-icon"></span>
+                        <span class="right-sideBar-text">网页游戏</span>
+                    </a>
+                </li>
+                <li class="right-sideBar-item" id="r5">
+                    <a href="https://www.douyu.com/member/message/release" target="_blank">
+                        <span class="right-sideBar-icon"></span>
+                        <span class="right-sideBar-text">意见反馈</span>
+                    </a>
+                </li>
+                <li class="right-sideBar-item" id="back-top">
+                    <a href="javascript:window.scrollTo(0,0);">
+                        <span class="right-sideBar-icon"></span>
+                    </a>
+                </li>
+            </ul>
         </div>
         </div>
     </body>

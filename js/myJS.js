@@ -16,7 +16,6 @@ function changePlayer(n){
     
     for (var i=1; i<7; i++){
         if(i!=n){
-            console.log(i);
             a = "a" + i;
             player="player"+i;
             sliderBorder[i-1].style.display="none";
@@ -346,9 +345,135 @@ function addElement(){
 }
 
 
+function showLeftBar (){
+    var height = document.documentElement.scrollTop;
+    var leftBar = document.getElementById("left-sideBar");
+    var top = document.getElementById("yzns");
+    var show_time = top.offsetTop-top.offsetHeight;
+
+    if(height > show_time){
+        leftBar.style.display="block";
+    }
+    else if(height < show_time){
+        leftBar.style.display="none";
+    }
+}
+
+
+function changeActive(n){
+    var items = document.getElementById("s"+n);
+    items.className="left-sideBar-item is-active";
+    items.style.backgroundImage="linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/left_sidebar_"+n+".webp)";
+    var seperators = document.getElementsByClassName("seperator");
+    seperators[n-1].style.display="inline-block";
+
+    for (var i=1;i<6;i++){
+        if(i!=n){
+            if(i%2 == 0){
+                var item = document.getElementById("s"+i);
+                item.className="left-sideBar-item";
+                item.style.backgroundImage = "none";
+            }
+            else{
+                var item = document.getElementById("s"+i);
+                item.className="left-sideBar-item grey";
+                item.style.backgroundImage = "none";
+            }
+            seperators[i-1].style.display="none";
+        }
+    }
+}
+
+var part_id = ["yzns", "part_lol", "part_jdqs", "part_cf", "part_wzry"];
+
+function locate_leftSideBar(){
+    var seperators = document.getElementsByClassName("seperator");
+    var items = document.getElementsByClassName("left-sideBar-item");
+    
+    for(var i=0; i<items.length; i++){
+        var id = part_id[i];
+        var part = document.getElementById(id);
+        var botHeight = part.offsetTop;
+        var elementHeight = part.offsetHeight;
+        var topHeight = botHeight - elementHeight;
+        var height = document.documentElement.scrollTop;
+
+        if(height>topHeight && height<botHeight){
+            items[i].className="left-sideBar-item is-active";
+            items[i].style.backgroundImage="linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/left_sidebar_"+(i+1)+".webp)";
+            seperators[i].style.display="inline-block";
+        }
+        else{
+            if(i%2==0){
+                items[i].className="left-sideBar-item grey";
+            }
+            else{
+                items[i].className="left-sideBar-item";
+            }
+            items[i].style.backgroundImage = "none";
+            seperators[i].style.display="none";
+        }
+    }
+}
+
+
+function showRightBackTop(){
+    var height = document.documentElement.scrollTop;
+    var backTop = document.getElementById("back-top");
+
+    if(height > 400){
+        backTop.style.display="block";
+    }
+    else{
+        backTop.style.display="none";
+    }
+}
+
+window.addEventListener("scroll", function(){
+    showRightBackTop();
+    locate_leftSideBar();
+    showLeftBar();
+});
+
+
+function tjhd_player (){
+    var full_items = document.getElementById("full-items");
+    var players = document.getElementsByClassName("tjhd-player");
+    setTimeout(function(){
+        for(var i=0;i<3;i++){
+            if(players[i].className == "tjhd-player is-show"){
+                var index=(i+1)%3;
+                full_items.style.transform="translateX("+index*(-33.33)+"%)";
+                players[index].className = "tjhd-player is-show";
+                players[i].className="tjhd-player";
+                changeDot();
+                break;
+            }
+        }
+    }, 1000);
+}
+
+function chooseDot(){
+    clearInterval(4);
+}
+
+function changeDot(){
+    var player = document.getElementsByClassName("tjhd-player");
+    var dot = document.getElementsByClassName("dots");
+
+    for(var i=0; i<3; i++){
+        if(player[i].className == "tjhd-player is-show"){
+            dot[i].className = "dots is-selected";
+        }
+        else{
+            dot[i].className = "dots";
+        }
+    }
+}
 
 
 
-
-
-
+window.onload=function(){
+    this.tjhd_player();
+    setInterval(tjhd_player, 1000);
+};
