@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+    
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -54,14 +59,14 @@ svg {
 /*top nav css*/
 
 #Topper{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.0)), url(images/topper%E8%83%8C%E6%99%AF.webp);
-/*    background: linear-gradient(180deg,rgba(0,0,0,.5),hsla(0,0%,100%,0));*/
+    background-image: linear-gradient(180deg,rgba(0,0,0,.5),hsla(0,0%,100%,0)), url(images/topper%E8%83%8C%E6%99%AF.webp);
     display:block;
     background-repeat: no-repeat;
     background-position:50%;
     background-size:cover;
     max-height:472px;
     margin-bottom:40px;
+    width:100%;
 }
 
 #logo svg{
@@ -86,12 +91,44 @@ svg {
     display:inline-block;
 }
 
-#Nav {
+#Nav{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+
+.nav-container {
     width:960px;
     position:relative;
     margin: 0 auto;
     height:68px;
     top:-10px;
+    display:block;
+}
+
+#Nav.is-fixed{
+    display: block;
+    position:fixed;
+    background-color: rgba(32, 23, 49, 1);
+    top:0;
+    left:0;
+    right:0;
+    z-index:100 ;
+}
+
+.navBut svg{
+    display: inline-block;
+    width: 6px;
+    height: 4px;
+    vertical-align: middle;
+    transition: transform .15s ease-out;
+    margin-left:-9px;
+}
+
+.navBut>li:hover>svg{
+    cursor:pointer;
+    color:#ff5d23;
+    transform: rotate(180deg);
 }
 
 .navBut li{
@@ -125,6 +162,130 @@ svg {
 
 .navBut a:hover{
     color:#ff5d23;
+}
+
+.navBut>li:hover>#d1{
+    display: block;
+}
+
+#Nav .drop-menu-module{
+    display: none;
+    width: 276px;
+    position: absolute;
+    top:32px;
+    left:100px;
+    margin-top: 50px;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index:1;
+    border-top: 3px solid #ff5d23;
+}
+
+.drop-container{
+    width: 244px;
+    position: relative;
+    padding-top: 12px;
+}
+
+.drop-arrow{
+    position: absolute;
+    top:-10px;
+    left:110px;
+    border-top: 0;
+    border-right: 7px dashed transparent;
+    border-bottom: 7px solid #ff5d23;
+    border-left: 7px dashed transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+}
+
+.drop-title{
+    width: 100%;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.drop-title h3{
+    color:#333;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+
+#Nav .drop-menu-module .drop-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.drop-menu-module .drop-icon{
+    margin: 0 8px 8px 0;
+    float:left;
+}
+
+.drop-icon a{
+    width: 57px;
+    height: 24px;
+    background: #f2f2f2;
+    line-height: 24px;
+    color: #888;
+    text-align: center;
+    border-radius: 24px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 0;
+    padding: 0 8px;
+    font-size: 12px;
+    margin:0;
+}
+
+.drop-icon a:hover{
+    color:white;
+    background-color: #ff5d23;
+}
+
+.drop-all{
+    width: 100%;
+}
+
+.drop-all a{
+    display: block;
+    height: 32px;
+    width: 100%;
+    border-radius: 6px;
+    background: #ff5d23;
+    line-height: 32px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 8px 0 15px;
+}
+
+.drop-all a:hover{
+    color:white;
+    background:#f14700;
+}
+
+.drop-ad{
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 3px;
+}
+
+.drop-ad a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin:0;
 }
 
 #leftTopper{
@@ -500,12 +661,54 @@ svg {
     margin-top:-9px;
 }
 
-.main-player{
+#main-player{
     width: 100%;
     height: 100%;
     overflow:hidden;
     border-radius: 6px;
     position:relative;
+}
+
+.back-button, .back-button:hover, .forward-button, .forward-button:hover{
+    background-image: url(images/player_button.webp);
+}
+
+.back-button{
+    width: 30px;
+    height: 80px;
+    background-position: 0 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -40px;
+    z-index:30;
+    cursor:pointer;
+    display: none;
+}
+
+.back-button:hover{
+    background-position: -30px 0;
+}
+
+.forward-button{
+    width: 30px;
+    height: 80px;
+    background-position: -60px 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -40px;
+    z-index:30;
+    cursor:pointer;
+    display: none;
+}
+
+.forward-button:hover{
+    background-position: -90px 0;
+}
+
+#main-player:hover .back-button, #main-player:hover .forward-button{
+    display: block;
 }
 
 #full-items{
@@ -1030,7 +1233,7 @@ svg {
 .square-cover{
     background:url(images/square_cover.webp) no-repeat 0;
     background-size: 101% 101%;
-    position: absolute;;
+    position: absolute;
     width: 160px;
     height: 162px;
     z-index:1;
@@ -1039,7 +1242,7 @@ svg {
 .double-square-cover{
     background:url(images/double_square_cover.webp) no-repeat 0;
     background-size: 101% 101%;
-    position: absolute;;
+    position: absolute;
     width: 320px;
     height: 162px;
     z-index:1;
@@ -1728,3 +1931,164 @@ a:hover .left-sideBar-item.is-active i{
     background-position: -22px 0;
 }
 
+
+#part_bottom{
+    height: inherit;
+}
+
+.bottom-container{
+    width: 100%;
+    height: 312px;
+    margin: 26px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.bottom-item{
+    height: 150px;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.bottom-item.L{
+    width: 378px;
+}
+
+.bottom-item.M{
+    width: 182px;
+}
+
+.bottom-item.XL{
+    width: 610px;
+}
+
+.bottom-item.S{
+    width: 144px;
+}
+
+.item-title{
+    padding-left: 20px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.item-title h3{
+    color:#000;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.item-content-block a:hover{
+    color:#ff5d23;
+}
+
+.item-content-block{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-left: 20px;
+    box-sizing: border-box;
+    height: 33px;
+    line-height: 33px;
+    float:left;
+    text-align: left;
+}
+
+.item-content-block a{
+    font-size: 12px;
+    color:#999;
+    height: 33px;
+    line-height: 33px;
+}
+
+.L .item-content-block{
+    width: 24%;
+}
+
+.M .item-content-block{
+    width: 45%;
+}
+
+.XL .item-content-block{
+    width: 14%;
+}
+
+.S .item-content-block{
+    width: 90%;
+}
+
+
+
+/* footer css */
+#footer{
+    width: 100%;
+    background-color: #3f3f3f;
+    padding-bottom: 50px;
+}
+
+.footer-container{
+    width: 960px;
+    margin:0 auto;
+    height: inherit;
+}
+
+.links{
+    width: 100%;
+    height: inherit;
+}
+
+.links-title{
+    color:#fff;
+    padding-top: 28px;
+    padding-bottom: 20px;
+}
+
+.links h2{
+    font-size: 16px;
+    text-align: left;
+}
+
+.links-content{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.links-item{
+    margin-right: 5px;
+    margin-bottom: 6px;
+    float:left;
+}
+
+.links-item a:hover{
+    color:white;
+}
+
+.links-item a{
+    display: block;
+    width: 132px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    color: hsla(0,0%,100%,.6);
+    text-align: center;
+    background: #464646;
+    font-size: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
